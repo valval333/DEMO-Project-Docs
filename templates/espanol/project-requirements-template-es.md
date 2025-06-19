@@ -6,12 +6,12 @@ LEXI:APRENDE SIN LIMITES
 
 ## 2. Miembros del Equipo  
 _Enumera todos los colaboradores que trabajan en el proyecto._
-VALENTINA ARROYAVE, CARLOS LOAIZA
+VALENTINA ARROYAVE, CARLOS LOAIZA .
 
 ## 3. Descripción General del Proyecto  
 _Una breve descripción (2-3 frases) que explique lo que hará tu aplicación o proyecto._
 A traves de un app se dara un aprendizaje de forma inmersiva a diferentes idiomas  con diferentes tecnicas de aprendizaje y un metodo interactivo que mantendra la atencion del usuario.
-Primero queremos desarrollar con ingles y luego avanzaremos con otros idiomas 
+Primero queremos desarrollar con ingles y luego avanzaremos con otros idiomas .
 
 
 ## 4. Declaración del Problema  
