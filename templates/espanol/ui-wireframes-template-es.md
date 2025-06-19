@@ -1,38 +1,92 @@
-# Plantilla de Wireframes de UI
 
-_Usa esta plantilla para vincular tus imágenes de wireframe y describir las pantallas clave y los flujos de usuario de tu aplicación._
+ # Wireframe Detallado - Pantalla Principal LEXI
+
+## Imagen de referencia
+![Wireframe Dashboard LEXI](image1)
 
 ---
 
 ## Descripción General
-_Describe la experiencia general del usuario y la estructura de navegación principal._
+
+La pantalla principal de LEXI ofrece al usuario una experiencia interactiva y motivadora para el aprendizaje de idiomas. Integra acceso rápido a las funcionalidades clave: lección del día, flashcards, libros, audios, retos diarios y juegos, permitiendo un aprendizaje flexible y adaptado a los intereses y ritmo del usuario. La navegación es clara, amigable y pensada para usabilidad móvil.
 
 ---
 
 ## Pantallas Clave
-_Proporciona una lista de las pantallas principales de tu aplicación. Para cada una, opcionalmente vincula o inserta una imagen del wireframe._
 
-- **Pantalla de Inicio**:
-- **Pantalla de Inicio de Sesión/Registro**:
-- **Panel/Área Principal**: ![Panel](ruta/a/panel.png)
-- **Pantalla de Detalle**: ![Pantalla de Detalle](ruta/a/pantalla-detalle.png)
-- **Configuración/Perfil**:
+- **Pantalla de Bienvenida/Inicio de sesión/Registro**:  
+  Permite ingresar o crear cuenta, elegir nivel inicial y acceder a la app.
 
-<small>(Reemplaza los enlaces e imágenes de ejemplo anteriores con las rutas o URLs reales de tus wireframes.)</small>
+- **Dashboard / Pantalla principal**:  
+  - Saludo personalizado (“Hola, Valentina”).
+  - Barra de progreso semanal (ejemplo: 60%).
+  - Botón “Lección del día”.
+  - Acceso directo a Flashcards, Libros y Audios.
+  - Sección de Retos diarios (Reto 1, Reto 2).
+  - Juegos interactivos: Juego de parejas, Rompecabezas.
+  - Menú inferior: Tips, Lecciones, Perfil.
+
+- **Lección del día**:  
+  Visualización de la lección breve (5-10 min), posibilidad de pausar y retomar, ejercicios interactivos.
+
+- **Flashcards**:  
+  Repaso rápido de vocabulario y frases, opción de marcar como aprendido o para repaso.
+
+- **Libros digitales**:  
+  Biblioteca graduada por nivel, marcadores, glosario integrado.
+
+- **Audios**:  
+  Ejercicios de listening, podcasts, diálogos en inglés.
+
+- **Retos diarios**:  
+  Listado de retos, acceso a recompensas y ranking.
+
+- **Juegos interactivos**:  
+  - Juego de parejas (icono de control).
+  - Rompecabezas (icono de pieza de puzzle).
+
+- **Perfil y Configuración**:  
+  Logros, metas, personalización de avatar/emojis y ajustes de cuenta.
 
 ---
 
 ## Flujos de Usuario
-_Describe los principales recorridos de usuario en tu aplicación. Opcionalmente, vincula diagramas de flujo o imágenes adicionales._
 
-- **Ejemplo: Realizar un Pedido**
-  1. El usuario inicia sesión
-  2. El usuario navega por el menú
-  3. El usuario selecciona artículos y los agrega al carrito
-  4. El usuario revisa el carrito y realiza el pedido
-  5. El usuario recibe una confirmación
-  <small>(Solo ejemplo. Reemplaza con tus propios flujos.)</small>
+- **Inicio y aprendizaje**  
+  1. El usuario abre la app y ve el saludo, su progreso y el menú principal.
+  2. Accede rápidamente a la lección del día, flashcards, libros, audios o retos.
+  3. Escoge y juega a los juegos educativos interactivos.
+  4. Desde el menú inferior puede consultar tips, navegar a todas las lecciones o entrar a su perfil.
+
+- **Uso de flashcards**  
+  1. Accede a la sección de flashcards desde el dashboard o menú.
+  2. Repasa tarjetas de vocabulario/frases.
+  3. Marca tarjetas como aprendidas o para repaso.
+  4. Visualiza avance en flashcards.
+
+- **Lectura y audios**  
+  1. Accede a la biblioteca de libros o audios.
+  2. Escoge contenido según su nivel.
+  3. Lee, escucha y usa funciones de marcadores/glosario.
+  4. Al finalizar recibe logros o recomendaciones.
+
+- **Personalización y seguimiento**  
+  1. Desde el dashboard, accede a su perfil.
+  2. Modifica metas, personaliza avatar, consulta logros y progreso.
+  3. Cambia nivel de dificultad cuando lo desee.
+
+- **Aprendizaje flexible**  
+  1. Puede pausar lecciones y retomarlas después.
+  2. Acceso 24/7 a contenido, sin horarios obligatorios.
+  3. Cambia de actividad según preferencia y tiempo disponible.
 
 ---
 
-<small>Actualiza este documento a medida que evolucione tu UI. Elimina los ejemplos y reemplázalos con tus propios wireframes y flujos.</small>
+## Notas de diseño
+
+- Estética amigable y moderna, uso de iconos para facilitar la navegación.
+- Botones y secciones interactivas con colores vivos y componentes grandes.
+- Iconos intuitivos para cada función (control, puzzle, usuario, libro, flashcard, audio).
+- Experiencia personalizable según nivel y progreso del usuario.
+
+---
