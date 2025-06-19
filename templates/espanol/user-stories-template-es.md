@@ -1,30 +1,95 @@
 # Plantilla de Historias de Usuario
 
 ---
+US-001: Como usuario ocupado, quiero acceder a lecciones cortas para que pueda estudiar inglés incluso si solo tengo 10 minutos libres al día.
+Contexto Ampliado:
 
-- **US-000:** Como [usuario], quiero [hacer algo] para que [beneficio].
+Este usuario tiene una rutina diaria muy ajustada (estudios, trabajo, familia) y no puede comprometerse con lecciones largas. Necesita contenidos breves y efectivos para mantener su aprendizaje activo sin afectar su tiempo. Esto mejora la constancia y reduce la tasa de abandono.
 
-  _Contexto Ampliado / descripción (opcional):_
-  > Usa esta sección para proporcionar una descripción adicional, antecedentes, persona de usuario, justificación, escenarios de ejemplo y cualquier enlace a documentos relacionados. Escribe en lenguaje natural para ayudar tanto a nuevos desarrolladores como a agentes de IA a entender la historia en profundidad.
+Criterios de Aceptación:
 
-  - **Criterios de Aceptación:**
-    - [ ] Criterio 1: (¿Qué debe ser cierto para que esta historia se considere completa?)
-    - [ ] Criterio 2: (Agrega más según sea necesario)
+ Las lecciones deben durar entre 5 y 10 minutos.
+
+ El usuario puede pausar y reanudar sin perder progreso.
+
+ Cada lección tiene un objetivo claro (ej. aprender 5 palabras nuevas o una estructura gramatical).
+
+- US-002: Como persona que se frustra con métodos tradicionales, quiero aprender con juegos y dinámicas interactivas para que me divierta mientras aprendo y no pierda la motivación.
+Contexto Ampliado:
+
+Muchos usuarios han tenido malas experiencias con métodos tradicionales de enseñanza. Al usar mecánicas de juego (gamificación), el aprendizaje se vuelve más atractivo, mejorando la retención de conocimiento y reduciendo la frustración.
+
+Criterios de Aceptación:
+
+ Debe haber al menos 3 tipos de juegos didácticos (parejas, completar frases, retos).
+
+ Los juegos deben adaptarse al nivel del usuario.
+
+ El progreso en los juegos debe estar vinculado al avance general del curso.
+
+- US-003: Como estudiante nuevo en el idioma, quiero tener contenido simple y directo para que no me sienta confundido o abrumado desde el inicio.
+Contexto Ampliado:
+
+Usuarios que empiezan desde cero requieren una experiencia clara, sin tecnicismos ni explicaciones largas. La interfaz y los ejercicios deben ser intuitivos y sencillos.
+
+Criterios de Aceptación:
+
+ Los textos deben estar escritos en un lenguaje amigable.
+
+ Debe haber uso de imágenes y ejemplos para explicar conceptos.
+
+ El contenido debe avanzar de forma progresiva y lógica.
+
+- US-004: Como adolescente que se aburre fácilmente, quiero usar métodos no tradicionales como retos, emojis o historias para que mi experiencia sea entretenida y diferente a lo típico del colegio.
+Contexto Ampliado:
+
+Los adolescentes buscan dinamismo y conexión emocional. Las herramientas tradicionales no logran mantener su atención, pero el uso de formatos modernos como historias visuales, memes o desafíos virales los motiva más.
+
+Criterios de Aceptación:
+
+ Debe haber una sección de retos diarios con recompensas simbólicas.
+
+ Las historias y ejercicios deben tener tono juvenil y lenguaje cercano.
+
+ Se debe permitir personalización visual con emojis o avatares.
+
+- US-005: Como persona con horarios cambiantes, quiero que la app se ajuste a mi tiempo disponible para que pueda aprender a mi ritmo sin presión.
+Contexto Ampliado:
+
+Este usuario no puede comprometerse con horarios fijos. Requiere flexibilidad para estudiar cuando pueda, sin penalización por pausas o días de inactividad.
+
+Criterios de Aceptación:
+
+ No se exige tiempo mínimo diario obligatorio.
+
+ El usuario puede marcar metas semanales y modificarlas.
+
+ El contenido debe estar disponible 24/7.
+
+- US-006: Como usuario que no es experto en tecnología, quiero una app fácil de usar para que pueda aprender sin complicaciones ni tutoriales complicados.
+Contexto Ampliado:
+
+Muchos usuarios no están familiarizados con apps complejas. Necesitan una interfaz limpia, intuitiva y con instrucciones claras para no frustrarse en el proceso.
+
+Criterios de Aceptación:
+
+ El diseño debe ser minimalista y accesible.
+
+ Los botones y secciones deben estar claramente etiquetados.
+
+ Debe haber una opción de ayuda o guía básica.
+
+- US-007: Como aprendiz autodidacta, quiero elegir mi nivel desde el inicio (básico, intermedio o avanzado) para que el contenido se adapte a lo que realmente necesito.
+Contexto Ampliado:
+
+Algunos usuarios ya tienen conocimientos previos y no quieren repetir lo básico. Ofrecer la opción de seleccionar nivel desde el inicio evita frustración y acelera su avance.
+
+Criterios de Aceptación:
+
+ El usuario puede seleccionar nivel al registrarse.
+
+ El contenido de cada nivel debe ser coherente y progresivo.
+
+ Se debe permitir cambiar de nivel más adelante si es necesario.
 
 ---
-
-**Ejemplo:**
-
-- **US-001:** Como cliente, quiero ver el menú en línea para poder decidir qué pedir antes de llegar.
-
-  _Contexto Ampliado / descripción (opcional):_
-  > Muchos clientes prefieren revisar el menú antes de visitar. Esta función debe ser fácil de encontrar y funcionar bien en todos los dispositivos. Ver wireframe: [enlace-al-wireframe]. Los datos del menú provienen de la base de datos del restaurante.
-  > La interfaz debe seguir principios modernos de diseño (diseño limpio, navegación intuitiva, diseño responsive). Consulta el sistema de diseño o la guía de marca para color y tipografía. La interfaz debe sentirse contemporánea y visualmente atractiva para los usuarios.
-  > Si el menú no está disponible, muestra un mensaje de error amigable. Pregunta abierta: ¿Los artículos no disponibles deben ocultarse o mostrarse como agotados?
-
-  - **Criterios de Aceptación:**
-    - [ ] El menú es accesible desde la página de inicio.
-    - [ ] Los elementos del menú incluyen nombres, descripciones y precios.
-    - [ ] El menú es visible en dispositivos móviles y de escritorio.
-
-_Agrega más historias de usuario a medida que tu proyecto avance._
