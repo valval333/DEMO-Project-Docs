@@ -1,0 +1,229 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f5ea; /* Fondo claro del logo */
+    color: #20506a; /* Azul oscuro del logo */
+}
+header {
+    background: #fff;
+    color: #20506a;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+.logo-lexi {
+    width: 110px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #20506a;
+}
+header .subtitle {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #3bb6b0;
+}
+.dashboard {
+    max-width: 420px;
+    margin: 2rem auto;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(32,80,106,0.08);
+}
+.greeting {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    color: #20506a;
+}
+.progress-bar {
+    margin-bottom: 1.5rem;
+}
+.progress-bar span {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+.bar-bg {
+    background: #e0e0e0;
+    border-radius: 8px;
+    height: 16px;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+.bar-fill {
+    background: #3bb6b0;
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.4s;
+}
+.progress-bar .percent {
+    font-size: 0.95rem;
+    color: #3bb6b0;
+    font-weight: 600;
+}
+.main-btn {
+    display: block;
+    width: 100%;
+    background: #20506a;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.2rem 0 1.5rem 0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.main-btn:hover {
+    background: #3bb6b0;
+}
+.quick-access {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.quick-access a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #20506a;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: #e0e0e0;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+.quick-access a:hover {
+    background: #3bb6b0;
+    color: #fff;
+}
+.daily-challenges h2, .games h2 {
+    font-size: 1.1rem;
+    color: #20506a;
+    margin-bottom: 0.5rem;
+}
+.daily-challenges ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.daily-challenges li {
+    background: #e0e0e0;
+    margin-bottom: 0.5rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+.badge {
+    background: #3bb6b0;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.games {
+    margin-bottom: 1.5rem;
+}
+.game-icons {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 2rem;
+    justify-content: flex-start;
+}
+.game-icons span {
+    background: #e0e0e0;
+    border-radius: 50%;
+    padding: 0.7rem 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.game-icons span:hover {
+    background: #3bb6b0;
+    color: #fff;
+}
+.bottom-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.7rem 0;
+    z-index: 100;
+}
+.bottom-nav a {
+    color: #20506a;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.bottom-nav a:hover {
+    color: #3bb6b0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.2rem 0 1.5rem 0;
+}
+.nav-btn {
+    background: #20506a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px #b2dfdb;
+    display: inline-block;
+}
+.nav-btn:hover, .nav-btn.active {
+    background: #3bb6b0;
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .dashboard {
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+    .quick-access a {
+        padding: 0.5rem 0.5rem;
+        font-size: 1rem;
+    }
+    .game-icons {
+        gap: 1rem;
+    }
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .nav-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.7rem 0;
+    }
+}

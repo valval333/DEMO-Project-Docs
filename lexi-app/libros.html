@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Libros por Nivel - LEXI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libros.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .niveles-btns { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0 2.5rem 0; }
+        .nivel-btn { background: #2a3a5e; color: #fff; border: none; border-radius: 8px; padding: 0.8rem 1.5rem; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .nivel-btn.active, .nivel-btn:hover { background: #3bb6b0; }
+        .libros-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
+        .libro-card { background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(32,80,106,0.08); width: 220px; display: flex; flex-direction: column; align-items: center; padding: 1.2rem 1rem 1.5rem 1rem; }
+        .libro-card img { width: 110px; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem; }
+        .libro-title { font-size: 1.1rem; font-weight: 600; color: #20506a; margin-bottom: 0.5rem; text-align: center; }
+        .libro-desc { font-size: 0.97rem; color: #3bb6b0; margin-bottom: 1rem; text-align: center; }
+        .libro-download { background: #3bb6b0; color: #fff; border: none; border-radius: 6px; padding: 0.5rem 1.2rem; font-size: 1rem; font-weight: 500; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+        .libro-download:hover { background: #2a3a5e; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-btn">Inicio</a>
+            <a href="leccion-del-dia/Leccion del dia.html" class="nav-btn">Lección del Día</a>
+            <a href="flashcards/flashcards.html" class="nav-btn">Flashcards</a>
+            <a href="libros.html" class="nav-btn">Libros</a>
+            <a href="Retos.html" class="nav-btn">Retos</a>
+            <a href="tips/tips.html" class="nav-btn">Tips</a>
+            <a href="juegos/juegos.html" class="nav-btn">Juegos</a>
+        </nav>
+    </header>
+    <main>
+        <div class="niveles-btns">
+            <button class="nivel-btn active" data-nivel="A1">A1</button>
+            <button class="nivel-btn" data-nivel="A2">A2</button>
+            <button class="nivel-btn" data-nivel="B1">B1</button>
+            <button class="nivel-btn" data-nivel="B2">B2</button>
+            <button class="nivel-btn" data-nivel="C1">C1</button>
+            <button class="nivel-btn" data-nivel="C2">C2</button>
+        </div>
+        <div class="libros-grid" id="librosGrid"></div>
+    </main>
+    <footer>
+        <p>LEXI &copy; 2025</p>
+    </footer>
+    <script>
+    // Libros de ejemplo por nivel
+    const librosPorNivel = {
+        A1: [
+            { titulo: 'English for Starters', desc: 'Libro básico para principiantes.', portada: 'https://covers.openlibrary.org/b/id/10523338-L.jpg', pdf: 'https://www.orimi.com/pdf-test.pdf' },
+            { titulo: 'Easy English A1', desc: 'Vocabulario y frases simples.', portada: 'https://covers.openlibrary.org/b/id/11153223-L.jpg', pdf: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
+        ],
+        A2: [
+            { titulo: 'English Next Steps', desc: 'Gramática y ejercicios A2.', portada: 'https://covers.openlibrary.org/b/id/10958339-L.jpg', pdf: 'https://www.orimi.com/pdf-test.pdf' }
+        ],
+        B1: [
+            { titulo: 'Intermediate English', desc: 'Lecturas y ejercicios B1.', portada: 'https://covers.openlibrary.org/b/id/10958340-L.jpg', pdf: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
+        ],
+        B2: [
+            { titulo: 'Upper-Intermediate English', desc: 'Textos y comprensión B2.', portada: 'https://covers.openlibrary.org/b/id/10958341-L.jpg', pdf: 'https://www.orimi.com/pdf-test.pdf' }
+        ],
+        C1: [
+            { titulo: 'Advanced English', desc: 'Material avanzado C1.', portada: 'https://covers.openlibrary.org/b/id/10958342-L.jpg', pdf: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
+        ],
+        C2: [
+            { titulo: 'Proficiency English', desc: 'Perfeccionamiento y práctica C2.', portada: 'https://covers.openlibrary.org/b/id/10958343-L.jpg', pdf: 'https://www.orimi.com/pdf-test.pdf' }
+        ]
+    };
+    function renderLibros(nivel) {
+        const grid = document.getElementById('librosGrid');
+        grid.innerHTML = '';
+        librosPorNivel[nivel].forEach(libro => {
+            const card = document.createElement('div');
+            card.className = 'libro-card';
+            card.innerHTML = `
+                <img src="${libro.portada}" alt="Portada de ${libro.titulo}">
+                <div class="libro-title">${libro.titulo}</div>
+                <div class="libro-desc">${libro.desc}</div>
+                <a href="${libro.pdf}" class="libro-download" download target="_blank">Descargar PDF</a>
+            `;
+            grid.appendChild(card);
+        });
+    }
+    // Botones de nivel
+    document.querySelectorAll('.nivel-btn').forEach(btn => {
+        btn.onclick = function() {
+            document.querySelectorAll('.nivel-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderLibros(btn.dataset.nivel);
+        };
+    });
+    // Inicializar con A1
+    renderLibros('A1');
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+/* Estilos exclusivos para la sección de tips */
+.tip-tabs { display: flex; justify-content: center; gap: 1.5rem; margin: 2rem 0; }
+.tip-tab { background: #2a3a5e; color: #fff; border: none; border-radius: 8px; padding: 0.8rem 1.5rem; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+.tip-tab.active, .tip-tab:hover { background: #3bb6b0; }
+.tips-content { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
+.tip-card { background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(32,80,106,0.08); width: 300px; padding: 1.2rem 1rem 1.5rem 1rem; margin-bottom: 1rem; }
+.tip-card h3 { color: #20506a; font-size: 1.1rem; margin-bottom: 0.5rem; }
+.tip-card p { color: #3bb6b0; font-size: 0.97rem; }

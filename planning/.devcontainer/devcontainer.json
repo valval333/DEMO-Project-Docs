@@ -1,7 +1,0 @@
-{
-  "name": "Agile Docs Dev Container",
-  "extensions": [
-    "bierner.markdown-mermaid",
-    "yzhang.markdown-all-in-one"
-  ]
-}

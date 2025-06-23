@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Retos Divertidos por Nivel - LEXI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="retos/retos.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .niveles-btns { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0 2.5rem 0; }
+        .nivel-btn { background: #2a3a5e; color: #fff; border: none; border-radius: 8px; padding: 0.8rem 1.5rem; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .nivel-btn.active, .nivel-btn:hover { background: #3bb6b0; }
+        .retos-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
+        .reto-card { background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(32,80,106,0.08); width: 260px; display: flex; flex-direction: column; align-items: center; padding: 1.2rem 1rem 1.5rem 1rem; }
+        .reto-title { font-size: 1.1rem; font-weight: 600; color: #20506a; margin-bottom: 0.5rem; text-align: center; }
+        .reto-desc { font-size: 0.97rem; color: #3bb6b0; margin-bottom: 1rem; text-align: center; }
+        .reto-icon { font-size: 2.5rem; margin-bottom: 0.7rem; }
+        .reto-btn { background: #3bb6b0; color: #fff; border: none; border-radius: 6px; padding: 0.5rem 1.2rem; font-size: 1rem; font-weight: 500; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+        .reto-btn:hover { background: #2a3a5e; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-btn">Inicio</a>
+            <a href="leccion-del-dia/Leccion del dia.html" class="nav-btn">Lección del Día</a>
+            <a href="flashcards/flashcards.html" class="nav-btn">Flashcards</a>
+            <a href="libros.html" class="nav-btn">Libros</a>
+            <a href="Retos.html" class="nav-btn">Retos</a>
+            <a href="tips/tips.html" class="nav-btn">Tips</a>
+            <a href="juegos/juegos.html" class="nav-btn">Juegos</a>
+        </nav>
+    </header>
+    <main>
+        <div class="niveles-btns">
+            <button class="nivel-btn active" data-nivel="A1">A1</button>
+            <button class="nivel-btn" data-nivel="A2">A2</button>
+            <button class="nivel-btn" data-nivel="B1">B1</button>
+            <button class="nivel-btn" data-nivel="B2">B2</button>
+            <button class="nivel-btn" data-nivel="C1">C1</button>
+            <button class="nivel-btn" data-nivel="C2">C2</button>
+        </div>
+        <div class="retos-grid" id="retosGrid"></div>
+    </main>
+    <footer>
+        <p>LEXI &copy; 2025</p>
+    </footer>
+    <script src="retos/retos.js"></script>
+</body>
+</html>

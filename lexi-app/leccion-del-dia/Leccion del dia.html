@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lección del Día - LEXI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background: #f7fafc; font-family: 'Segoe UI', 'Arial', sans-serif; }
+        .lesson-section { background: #fff; border-radius: 16px; box-shadow: 0 2px 12px rgba(32,80,106,0.08); margin: 2rem auto; padding: 2rem; max-width: 700px; }
+        h1, h2 { color: #20506a; }
+        h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.3rem; margin-top: 0; }
+        .logo-lexi { width: 90px; margin-bottom: 0.5rem; }
+        nav a { color: #3bb6b0; font-weight: 600; margin: 0 0.7rem; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        .quiz button { background: #3bb6b0; color: #fff; border: none; border-radius: 6px; padding: 0.5rem 1.2rem; font-size: 1rem; font-weight: 500; cursor: pointer; margin-top: 1rem; }
+        .quiz button:hover { background: #20506a; }
+        .question { margin-bottom: 1.2rem; }
+        blockquote { background: #e3f6f5; border-left: 5px solid #3bb6b0; border-radius: 8px; padding: 1rem 1.2rem; font-size: 1.08rem; color: #20506a; }
+        textarea { width: 100%; border-radius: 8px; border: 1px solid #b2dfdb; padding: 0.7rem; font-size: 1rem; margin-top: 0.5rem; }
+        .flashcards-niveles { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0 1.5rem 0; }
+        .flash-nivel-btn { background: #2a3a5e; color: #fff; border: none; border-radius: 8px; padding: 0.7rem 1.2rem; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .flash-nivel-btn.active, .flash-nivel-btn:hover { background: #3bb6b0; }
+        .flashcards-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+        .flashcard { background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(32,80,106,0.08); width: 160px; height: 110px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 1.1rem; color: #20506a; cursor: pointer; transition: box-shadow 0.2s, background 0.2s; position: relative; }
+        .flashcard.flipped { background: #3bb6b0; color: #fff; }
+        .flashcard .emoji { font-size: 2rem; margin-bottom: 0.3rem; }
+        .flashcard .back { display: none; }
+        .flashcard.flipped .front { display: none; }
+        .flashcard.flipped .back { display: block; }
+        .flashcards-title { text-align: center; color: #3bb6b0; font-size: 1.2rem; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="nav-btn">Inicio</a>
+            <a href="Leccion del dia.html" class="nav-btn">Lección del Día</a>
+            <a href="../flashcards/flashcards.html" class="nav-btn">Flashcards</a>
+            <a href="../libros.html" class="nav-btn">Libros</a>
+            <a href="../Retos.html" class="nav-btn">Retos</a>
+            <a href="../tips/tips.html" class="nav-btn">Tips</a>
+            <a href="../juegos/juegos.html" class="nav-btn">Juegos</a>
+        </nav>
+    </header>
+    <main>
+        <section class="lesson-section" style="margin-top:0;">
+            <h2 class="flashcards-title" style="font-size:1.7rem; color:#3bb6b0; margin-bottom:1.2rem;">🌟 Flashcards del Día por Nivel</h2>
+            <div class="flashcards-niveles">
+                <button class="flash-nivel-btn active" data-nivel="A1">A1</button>
+                <button class="flash-nivel-btn" data-nivel="A2">A2</button>
+                <button class="flash-nivel-btn" data-nivel="B1">B1</button>
+                <button class="flash-nivel-btn" data-nivel="B2">B2</button>
+                <button class="flash-nivel-btn" data-nivel="C1">C1</button>
+                <button class="flash-nivel-btn" data-nivel="C2">C2</button>
+            </div>
+            <div class="flashcards-grid" id="flashcardsGrid"></div>
+        </section>
+        <section class="lesson-section">
+            <h2>Listening & Comprensión</h2>
+            <p>Escucha el siguiente audio y responde las preguntas:</p>
+            <audio controls src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfa8c7b.mp3"></audio>
+            <form class="quiz" id="listening-quiz">
+                <div class="question">
+                    <p>1. ¿A dónde va Anna después de desayunar?</p>
+                    <label><input type="radio" name="lq1"> Al parque</label><br>
+                    <label><input type="radio" name="lq1"> A la escuela</label><br>
+                    <label><input type="radio" name="lq1"> A la casa de su amiga</label>
+                </div>
+                <div class="question">
+                    <p>2. ¿Cuál es la materia favorita de Anna?</p>
+                    <label><input type="radio" name="lq2"> Matemáticas</label><br>
+                    <label><input type="radio" name="lq2"> Inglés</label><br>
+                    <label><input type="radio" name="lq2"> Ciencias</label>
+                </div>
+                <div class="question">
+                    <p>3. ¿Qué hace Anna después de la escuela?</p>
+                    <label><input type="radio" name="lq3"> Hace la tarea</label><br>
+                    <label><input type="radio" name="lq3"> Juega en el parque</label><br>
+                    <label><input type="radio" name="lq3"> Ve televisión</label>
+                </div>
+                <button type="button" onclick="checkListeningAnswers()">Comprobar respuestas</button>
+                <div id="listening-quiz-result" style="margin-top:1rem;font-weight:bold;"></div>
+            </form>
+        </section>
+        <section class="lesson-section">
+            <h2>Speaking</h2>
+            <p>Repite la frase en voz alta:</p>
+            <blockquote>"The cat is under the table."</blockquote>
+            <button>Grabar mi voz</button>
+        </section>
+        <section class="lesson-section">
+            <h2>Writing</h2>
+            <p>Escribe lo que recuerdas del audio:</p>
+            <textarea rows="2" placeholder="Escribe aquí..."></textarea>
+        </section>
+        <section class="lesson-section">
+            <h2>Reading & Comprensión</h2>
+            <p>Lee el siguiente texto y responde las preguntas:</p>
+            <blockquote>
+                "Anna wakes up early every morning. She eats breakfast and then walks to school. Her favorite subject is English. After school, she plays with her friends in the park."
+            </blockquote>
+            <form class="quiz" id="reading-quiz">
+                <div class="question">
+                    <p>1. ¿A dónde va Anna después de desayunar?</p>
+                    <label><input type="radio" name="rq1"> Al parque</label><br>
+                    <label><input type="radio" name="rq1"> A la escuela</label><br>
+                    <label><input type="radio" name="rq1"> A la casa de su amiga</label>
+                </div>
+                <div class="question">
+                    <p>2. ¿Cuál es la materia favorita de Anna?</p>
+                    <label><input type="radio" name="rq2"> Matemáticas</label><br>
+                    <label><input type="radio" name="rq2"> Inglés</label><br>
+                    <label><input type="radio" name="rq2"> Ciencias</label>
+                </div>
+                <div class="question">
+                    <p>3. ¿Qué hace Anna después de la escuela?</p>
+                    <label><input type="radio" name="rq3"> Hace la tarea</label><br>
+                    <label><input type="radio" name="rq3"> Juega en el parque</label><br>
+                    <label><input type="radio" name="rq3"> Ve televisión</label>
+                </div>
+                <button type="button" onclick="checkReadingAnswers()">Comprobar respuestas</button>
+                <div id="reading-quiz-result" style="margin-top:1rem;font-weight:bold;"></div>
+            </form>
+        </section>
+            <p>Escucha las siguientes preguntas sobre el texto y responde:</p>
+            <form class="quiz" id="listening-text-quiz">
+                <div class="question">
+                    <p>1. ¿A qué hora se despierta Anna?</p>
+                    <label><input type="radio" name="lq1"> Tarde</label><br>
+                    <label><input type="radio" name="lq1"> Temprano</label><br>
+                    <label><input type="radio" name="lq1"> Al mediodía</label>
+                </div>
+                <div class="question">
+                    <p>2. ¿Con quién juega Anna después de la escuela?</p>
+                    <label><input type="radio" name="lq2"> Con su perro</label><br>
+                    <label><input type="radio" name="lq2"> Con sus amigos</label><br>
+                    <label><input type="radio" name="lq2"> Con su hermana</label>
+                </div>
+                <div class="question">
+                    <p>3. ¿Qué hace Anna antes de ir a la escuela?</p>
+                    <label><input type="radio" name="lq3"> Duerme</label><br>
+                    <label><input type="radio" name="lq3"> Desayuna</label><br>
+                    <label><input type="radio" name="lq3"> Juega en el parque</label>
+                </div>
+                <button type="button" onclick="checkListeningTextAnswers()">Comprobar respuestas</button>
+                <div id="listening-text-quiz-result" style="margin-top:1rem;font-weight:bold;"></div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>LEXI &copy; 2025</p>
+    </footer>
+    <script>
+    function checkReadingAnswers() {
+        const rq1 = document.getElementsByName('rq1');
+        const rq2 = document.getElementsByName('rq2');
+        const rq3 = document.getElementsByName('rq3');
+        let score = 0;
+        if(rq1[1].checked) score++;
+        if(rq2[1].checked) score++;
+        if(rq3[1].checked) score++;
+        document.getElementById('reading-quiz-result').textContent = `Respuestas correctas: ${score}/3`;
+    }
+    function checkListeningAnswers() {
+        const lq1 = document.getElementsByName('lq1');
+        const lq2 = document.getElementsByName('lq2');
+        const lq3 = document.getElementsByName('lq3');
+        let score = 0;
+        if(lq1[1].checked) score++;
+        if(lq2[1].checked) score++;
+        if(lq3[1].checked) score++;
+        document.getElementById('listening-quiz-result').textContent = `Respuestas correctas: ${score}/3`;
+    }
+    function checkListeningTextAnswers() {
+        const lq1 = document.getElementsByName('lq1');
+        const lq2 = document.getElementsByName('lq2');
+        const lq3 = document.getElementsByName('lq3');
+        let score = 0;
+        if(lq1[1].checked) score++; // Temprano
+        if(lq2[1].checked) score++; // Con sus amigos
+        if(lq3[1].checked) score++; // Desayuna
+        document.getElementById('listening-text-quiz-result').textContent = `Respuestas correctas: ${score}/3`;
+    }
+    // Flashcards por nivel
+    const flashcardsPorNivel = {
+        A1: [
+            {front: 'Dog', back: 'Perro', emoji: '🐶'},
+            {front: 'House', back: 'Casa', emoji: '🏠'},
+            {front: 'Book', back: 'Libro', emoji: '📚'},
+            {front: 'Sun', back: 'Sol', emoji: '☀️'}
+        ],
+        A2: [
+            {front: 'Window', back: 'Ventana', emoji: '🪟'},
+            {front: 'Chair', back: 'Silla', emoji: '🪑'},
+            {front: 'Tree', back: 'Árbol', emoji: '🌳'},
+            {front: 'Car', back: 'Coche', emoji: '🚗'}
+        ],
+        B1: [
+            {front: 'Journey', back: 'Viaje', emoji: '🧳'},
+            {front: 'Mountain', back: 'Montaña', emoji: '⛰️'},
+            {front: 'River', back: 'Río', emoji: '🌊'},
+            {front: 'Friendship', back: 'Amistad', emoji: '🤝'}
+        ],
+        B2: [
+            {front: 'Achievement', back: 'Logro', emoji: '🏆'},
+            {front: 'Challenge', back: 'Desafío', emoji: '🎯'},
+            {front: 'Knowledge', back: 'Conocimiento', emoji: '🧠'},
+            {front: 'Success', back: 'Éxito', emoji: '🎉'}
+        ],
+        C1: [
+            {front: 'Resilience', back: 'Resiliencia', emoji: '💪'},
+            {front: 'Insight', back: 'Perspicacia', emoji: '🔎'},
+            {front: 'Commitment', back: 'Compromiso', emoji: '🤝'},
+            {front: 'Wisdom', back: 'Sabiduría', emoji: '🦉'}
+        ],
+        C2: [
+            {front: 'Serendipity', back: 'Serendipia', emoji: '✨'},
+            {front: 'Epiphany', back: 'Epifanía', emoji: '💡'},
+            {front: 'Quintessence', back: 'Quintaesencia', emoji: '🌟'},
+            {front: 'Ethereal', back: 'Etéreo', emoji: '🕊️'}
+        ]
+    };
+    function renderFlashcards(nivel) {
+        const grid = document.getElementById('flashcardsGrid');
+        grid.innerHTML = '';
+        flashcardsPorNivel[nivel].forEach((card, idx) => {
+            const div = document.createElement('div');
+            div.className = 'flashcard';
+            div.innerHTML = `<div class='front'><div class='emoji'>${card.emoji}</div><div>${card.front}</div></div><div class='back'><div class='emoji'>${card.emoji}</div><div>${card.back}</div></div>`;
+            div.onclick = function() { div.classList.toggle('flipped'); };
+            grid.appendChild(div);
+        });
+    }
+    document.querySelectorAll('.flash-nivel-btn').forEach(btn => {
+        btn.onclick = function() {
+            document.querySelectorAll('.flash-nivel-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderFlashcards(btn.dataset.nivel);
+        };
+    });
+    renderFlashcards('A1');
+    </script>
+</body>
+</html>
